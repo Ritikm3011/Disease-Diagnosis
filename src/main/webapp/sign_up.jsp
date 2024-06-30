@@ -62,20 +62,28 @@
 									<option value="Other">Other</option>
 								</select>
 							</div>
-							
+
 							<div class="mb-3">
 								<label class="form-label">Blood group</label> <select required
 									class="form-control" name="blood_group">
 									<option disabled selected>---select---</option>
-									<option value="A+">A RhD positive (A+)</option>
-									<option value="A-">A RhD negative (A-)</option>
-									<option value="B+">B RhD positive (B+)</option>
-									<option value="B-">B RhD negative (B-)</option>
-									<option value="O+">O RhD positive (O+)</option>
-									<option value="O-">O RhD negative (O-)</option>
-									<option value="AB+">AB RhD positive (AB+)</option>
-									<option value="AB-">AB RhD negative (AB-)</option>
-									
+									<option value="A RhD positive (A+)">A RhD positive
+										(A+)</option>
+									<option value="A RhD negative (A-)">A RhD negative
+										(A-)</option>
+									<option value="B RhD positive (B+)">B RhD positive
+										(B+)</option>
+									<option value="B RhD negative (B-)">B RhD negative
+										(B-)</option>
+									<option value="O RhD positive (O+)">O RhD positive
+										(O+)</option>
+									<option value="O RhD negative (O-)">O RhD negative
+										(O-)</option>
+									<option value="AB RhD positive (AB+)">AB RhD positive
+										(AB+)</option>
+									<option value="AB RhD negative (AB-)">AB RhD negative
+										(AB-)</option>
+
 								</select>
 							</div>
 
@@ -96,7 +104,10 @@
 							<div class="text-center pt-4">
 								<button class="btn btn-success col-md-10">Sign Up</button>
 							</div>
-
+							<div class="text-center mt-2">
+								Already have account? <a href="log_in.jsp"
+									class="text-decoration-none">log in</a>
+							</div>
 
 						</form>
 					</div>

@@ -52,7 +52,7 @@ public class UserDao {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("problem in StudentDao.login");
+			System.out.println("problem in UserDao.login");
 		}
 		return user;
 	}

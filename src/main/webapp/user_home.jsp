@@ -13,6 +13,18 @@
 	<%@include file="component/user_navbar.jsp"%>
 
 
+<%-- Check if userObj is available in the session --%>
+	<c:if test="${not empty userObj}">
+		
+		<button type="button" class="btn btn-outline-light">User Id: ${userObj.userId}</button>
+
+	</c:if>
+
+	<%-- Display a message if studentObj is not found in the session --%>
+	<c:if test="${empty userObj}">
+		<c:redirect url="log_in.jsp"></c:redirect>
+	</c:if>
+
 
 	<div class="container my-3 py-3">
 		<div class="row">
@@ -29,53 +41,38 @@
 
 					<div class="card-body">
 						<div class="card-body">
-							<form action="SignUpServlet" method="post">
+							<form action="#" method="post">
 
 
 								<div class="mb-3">
 									<label class="form-label">Full Name</label> <input
-										class="form-control" name="name" type="text">
+										class="form-control" name="name"  type="text" disabled placeholder="${userObj.name}">
 								</div>
 
 								<div class="mb-3">
 									<label class="form-label">Email Address</label> <input
-										class="form-control" name="email" type="email">
+										class="form-control" name="email" type="email" disabled placeholder="${userObj.email}"> 
 								</div>
 
 								<div class="mb-3">
 									<label class="form-label">Phone No.</label> <input
-										class="form-control" name="phone" type="text">
+										class="form-control" name="phone" type="text" disabled placeholder="${userObj.phone}">
 								</div>
 
 								<div class="mb-3">
 									<label class="form-label">Date Of Birth </label> <input
-										class="form-control" name="dob" type="date">
+										class="form-control" name="dob" type="text" disabled placeholder="${userObj.dob}">
 								</div>
 								<div class="mb-3">
-									<label class="form-label">Gender</label> <select required
-										class="form-control" name="gender">
-										<option disabled selected>---select---</option>
-										<option value="Male">Male</option>
-										<option value="Female">Female</option>
-										<option value="Other">Other</option>
-									</select>
+									<label class="form-label">Gender </label> <input
+										class="form-control" name="gender" type="text" disabled placeholder="${userObj.gender}">
 								</div>
-
 								<div class="mb-3">
-									<label class="form-label">Blood group</label> <select required
-										class="form-control" name="blood_group">
-										<option disabled selected>---select---</option>
-										<option value="A+">A RhD positive (A+)</option>
-										<option value="A-">A RhD negative (A-)</option>
-										<option value="B+">B RhD positive (B+)</option>
-										<option value="B-">B RhD negative (B-)</option>
-										<option value="O+">O RhD positive (O+)</option>
-										<option value="O-">O RhD negative (O-)</option>
-										<option value="AB+">AB RhD positive (AB+)</option>
-										<option value="AB-">AB RhD negative (AB-)</option>
-
-									</select>
+									<label class="form-label">Blood Group </label> <input
+										class="form-control" name="gender" type="text" disabled placeholder="${userObj.bloodGroup}">
 								</div>
+
+				
 
 								
 
@@ -83,14 +80,12 @@
 
 								<div class="mb-3">
 									<label class="form-label">Address</label> <input
-										class="form-control" name="address" type="text">
+										class="form-control" name="address" type="text" disabled placeholder="${userObj.address}">
 								</div>
 
 
 
-								<div class="text-center pt-4">
-									<button class="btn btn-success col-md-10">Sign Up</button>
-								</div>
+								
 
 
 							</form>
@@ -102,9 +97,9 @@
 			<div class="col-md-4">
 				<div class="card shadow-lg p-3 mb-5 bg-body rounded">
 					<div class="card-body text-center">
-					<button type="button" class="btn btn-outline-danger col-md-10">Upload Prescription</button>
+					<a href="upload.jsp" type="button" class="btn btn-outline-danger col-md-10"><i class="fa-solid fa-upload fa-beat"></i> Upload Prescription</a>
 					<br><br>
-					<button type="button" class="btn btn-outline-success col-md-10">Diagnosis Results</button>
+					<a href="result.jsp" type="button" class="btn btn-outline-success col-md-10"><i class="fa-solid fa-stethoscope"></i> Diagnosis Results</a>
 					</div>
 				</div>
 
