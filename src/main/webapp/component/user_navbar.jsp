@@ -26,7 +26,7 @@
 
 
 				<li class="nav-item"><a class="nav-link active"
-					aria-current="page" href="UserLogoutServlet"><i
+					aria-current="page" href="LogOutServlet"><i
 						class="fa-solid fa-right-from-bracket fa-flip-horizontal"></i> Log
 						Out</a></li>
 
