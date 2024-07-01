@@ -18,6 +18,7 @@
 		<property name="format_sql">true</property>
 		
 		<mapping class="com.entity.User"/>
+		<mapping class="com.entity.Result"/>
 		
 	
 		

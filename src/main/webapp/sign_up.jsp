@@ -36,22 +36,22 @@
 
 							<div class="mb-3">
 								<label class="form-label">Full Name</label> <input
-									class="form-control" name="name" type="text">
+									class="form-control" name="name" type="text" required>
 							</div>
 
 							<div class="mb-3">
 								<label class="form-label">Email Address</label> <input
-									class="form-control" name="email" type="email">
+									class="form-control" name="email" type="email" required>
 							</div>
 
 							<div class="mb-3">
 								<label class="form-label">Phone No.</label> <input
-									class="form-control" name="phone" type="text">
+									class="form-control" name="phone" type="text" required>
 							</div>
 
 							<div class="mb-3">
 								<label class="form-label">Date Of Birth </label> <input
-									class="form-control" name="dob" type="date">
+									class="form-control" name="dob" type="date" required>
 							</div>
 							<div class="mb-3">
 								<label class="form-label">Gender</label> <select required
@@ -89,14 +89,14 @@
 
 							<div class="mb-3">
 								<label class="form-label">Password</label> <input
-									class="form-control" name="password" type="password">
+									class="form-control" name="password" type="password" required>
 							</div>
 
 
 
 							<div class="mb-3">
 								<label class="form-label">Address</label> <input
-									class="form-control" name="address" type="text">
+									class="form-control" name="address" type="text" required>
 							</div>
 
 

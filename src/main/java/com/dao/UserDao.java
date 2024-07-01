@@ -1,11 +1,14 @@
 package com.dao;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 
+import com.entity.Result;
 import com.entity.User;
 
 public class UserDao {
@@ -56,5 +59,46 @@ public class UserDao {
 		}
 		return user;
 	}
+	
+	public boolean storeResult(Result result) {
+		boolean f = false;
+		
+		try {
+			session = factory.openSession();
+			txn = session.beginTransaction();
+
+			session.save(result);
+			txn.commit();
+			f = true;
+			session.close();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("problem in UserDao.storeResult");
+		}
+		
+		
+		return f;
+		
+	}
+	
+	public List<Result> getResult(int userId) {
+		List<Result> resultList = null;
+
+		try {
+			session = factory.openSession();
+			Query query = session.createQuery("from Result where userId=:id");
+			query.setParameter("id", userId);
+
+			resultList = query.list();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("problem in AdminDao.getAllExam");
+		}
+
+		return resultList;
+	}
+	
 	
 }

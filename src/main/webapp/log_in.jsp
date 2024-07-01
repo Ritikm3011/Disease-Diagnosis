@@ -38,11 +38,11 @@
 
 							<div class="mb-3">
 								<label class="form-label">Enter Email</label> <input
-									class="form-control" name="email" type="email">
+									class="form-control" name="email" type="email" required> 
 							</div>
 							<div class="mb-3">
 								<label class="form-label">Enter Password</label> <input
-									class="form-control" name="password" type="password">
+									class="form-control" name="password" type="password" required>
 							</div>
 
 
