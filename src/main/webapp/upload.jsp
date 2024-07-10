@@ -44,7 +44,7 @@
 					</div>
 
 					<div class="card-body">
-						<form action="UploadServlet" method="post">
+						<form action="UploadServlet" method="post" enctype="multipart/form-data">
 
 
 							<div class="row g-3">
@@ -150,7 +150,7 @@
 								</div>
 
 								<div class="input-group mb-3">
-									<input type="file" class="form-control" id="inputGroupFile02">
+									<input type="file" class="form-control" name="image">
 									<label class="input-group-text" for="inputGroupFile02">Upload
 										Prescription</label>
 								</div>

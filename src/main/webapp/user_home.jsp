@@ -97,9 +97,9 @@
 			<div class="col-md-4">
 				<div class="card shadow-lg p-3 mb-5 bg-body rounded">
 					<div class="card-body text-center">
-					<a href="upload.jsp" type="button" class="btn btn-outline-danger col-md-10"><i class="fa-solid fa-upload fa-beat"></i> Upload Prescription</a>
+					<a href="upload1.jsp" type="button" class="btn btn-outline-danger col-md-10"><i class="fa-solid fa-upload fa-beat"></i> Upload Prescription</a>
 					<br><br>
-					<a href="result.jsp" type="button" class="btn btn-outline-success col-md-10"><i class="fa-solid fa-stethoscope"></i> Diagnosis Results</a>
+					<a href="result.jsp" type="button" class="btn btn-outline-success col-md-10"><i class="fa-solid fa-stethoscope"></i> Scanned Results</a>
 					</div>
 				</div>
 

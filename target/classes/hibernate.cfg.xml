@@ -19,6 +19,7 @@
 		
 		<mapping class="com.entity.User"/>
 		<mapping class="com.entity.Result"/>
+		<mapping class="com.entity.PrescriptionData"/>
 		
 	
 		

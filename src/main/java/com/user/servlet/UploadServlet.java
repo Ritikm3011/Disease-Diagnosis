@@ -2,10 +2,12 @@ package com.user.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
 
 import com.dao.UserDao;
 import com.db.FactoryProvider;
@@ -15,6 +17,7 @@ import com.helper.DateTime;
 /**
  * Servlet implementation class UploadServlet
  */
+@MultipartConfig
 public class UploadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -40,7 +43,8 @@ public class UploadServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
-		int userId =Integer.parseInt(request.getParameter("userId"));
+//		int userId =Integer.parseInt(request.getParameter("userId"));
+		int userId =12;
 		String name = request.getParameter("name");
 		String gender = request.getParameter("gender");
 		String dob = request.getParameter("dob");
@@ -57,6 +61,12 @@ public class UploadServlet extends HttpServlet {
 		String resultx = "Pending..";
 		String dateTime = DateTime.getDateTime();
 		
+		Part filePart = request.getPart("imageFile");
+		String imageName = filePart.getSubmittedFileName();
+		
+		System.out.println(imageName);
+		
+		
 		response.getWriter().print(name+"\t"+gender+"\t"+diagnose+"\t"+taking_medication);
 		response.getWriter().println(symptoms1+"\t"+symptoms2+"\t"+symptoms3+"\t"+symptoms4+"\t"+symptoms5+"\t"+symptoms6);
 		
@@ -64,15 +74,15 @@ public class UploadServlet extends HttpServlet {
 				UserDao dao = new UserDao(FactoryProvider.getSessionFactory());
 		HttpSession session = request.getSession();
 		
-		if (dao.storeResult(result)) {
-			session.setAttribute("successMsg", "Uploaded Successfully");
-			response.sendRedirect("success.jsp");
-
-		} else {
-			session.setAttribute("failMsg", "Someting went wrong");
-			response.sendRedirect("success.jsp");
-			
-		}
+//		if (dao.storeResult(result)) {
+//			session.setAttribute("successMsg", "Uploaded Successfully");
+//			response.sendRedirect("success.jsp");
+//
+//		} else {
+//			session.setAttribute("failMsg", "Someting went wrong");
+//			response.sendRedirect("success.jsp");
+//			
+//		}
 		
 		
 		

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="index.jsp"><i
-			class="fa-solid fa-hand-holding-medical"></i> Disease Diagnosis</a>
+			class="fa-solid fa-hand-holding-medical"></i> Prescription Scanning</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 			data-bs-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -16,7 +16,7 @@
 
 
 				<li class="nav-item"><a class="nav-link active"
-					aria-current="page" href="upload.jsp"><i
+					aria-current="page" href="upload1.jsp"><i
 						class="fa-solid fa-right-to-bracket"></i> Upload</a></li>
 
 
